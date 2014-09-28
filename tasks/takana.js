@@ -16,10 +16,11 @@ module.exports = function(grunt) {
   grunt.registerTask('takana', 'start takana for this project', function() {
     this.async();
     
-    var options = this.options({
+    var _options = grunt.config.get('takana'),
+        options = _options ? _options : this.options({
       includePaths: [],
       path:         process.cwd()
-    }); 
+    });
 
     takana.run({
       path:         fs.realpathSync(options.path),
