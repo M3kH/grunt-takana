@@ -15,7 +15,7 @@ var path    = require('path'),
 module.exports = function(grunt) {
   grunt.registerTask('takana', 'start takana for this project', function() {
     this.async();
-    
+
     var _options = grunt.config.get('takana'),
         options = _options ? _options : this.options({
       includePaths: [],
